@@ -1,7 +1,7 @@
-import { Persona } from "~/server/models/persona.models";
+import { Curso } from "~/server/models/curso.models";
 
 export default defineEventHandler(async(event)=>{
     const id = getRouterParam(event,'id')
-    const persona = await Persona.findByIdAndUpdate(id,{estado:'0'})
+    const curso = await Curso.findByIdAndUpdate(id,{status:'0'})
     return {id}
 })

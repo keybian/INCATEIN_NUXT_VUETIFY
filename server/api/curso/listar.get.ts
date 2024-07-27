@@ -1,8 +1,8 @@
-import {Persona} from "../../models/persona.models"
+import {Curso} from "../../models/curso.models"
 
 export default defineEventHandler(async(event)=>{
-    const personas = await Persona.find({status:'1'})
-    return {personas}
+    const cursos = await Curso.find({status:'1'})
+    return {cursos}
 })
 
 
